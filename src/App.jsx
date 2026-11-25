@@ -9,6 +9,8 @@ import {
   X,
   Sparkles,
 } from "lucide-react";
+import "./App.css";
+
 function GithubIcon({ size = 20 }) {
   return (
     <svg
@@ -38,7 +40,6 @@ function LinkedinIcon({ size = 20 }) {
     </svg>
   );
 }
-import "./App.css";
 
 const roles = [
   "Computer Science Student",
@@ -107,6 +108,8 @@ function App() {
         {/* HERO SECTION */}
         <section className="hero" id="home">
           <div className="hero-grid container">
+
+            {/* LEFT SIDE: INTRODUCTION */}
             <motion.div
               className="hero-content"
               initial={{ opacity: 0, y: 30 }}
@@ -182,70 +185,25 @@ function App() {
                   <Mail size={20} />
                 </a>
               </div>
+            </motion.div>
 
-              {/* CODE CARD */}
-              <div className="visual-card">
-                <div className="visual-card-top">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <p>developer.js</p>
-                </div>
+            {/* RIGHT SIDE: PROFILE PHOTO */}
+            <motion.div
+              className="hero-visual"
+              initial={{ opacity: 0, scale: 0.92, x: 25 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.9, delay: 0.15 }}
+            >
+              <div className="hero-photo-glow"></div>
 
-                <div className="code-content">
-                  <p>
-                    <span className="code-purple">const</span> developer = {"{"}
-                  </p>
-
-                  <p className="code-indent">
-                    name: <span className="code-green">'Kartik Arora'</span>,
-                  </p>
-
-                  <p className="code-indent">
-                    education: <span className="code-green">'B.Tech CSE'</span>,
-                  </p>
-
-                  <p className="code-indent">
-                    university: <span className="code-green">'MRU'</span>,
-                  </p>
-
-                  <p className="code-indent">
-                    passion: <span className="code-green">'Technology'</span>,
-                  </p>
-
-                  <p className="code-indent">
-                    learning: <span className="code-orange">true</span>,
-                  </p>
-
-                  <p className="code-indent">
-                    building: <span className="code-orange">true</span>
-                  </p>
-
-                  <p>{"};"}</p>
-
-                  <br />
-
-                  <p>
-                    <span className="code-purple">console</span>.
-                    <span className="code-blue">log</span>(
-                  </p>
-
-                  <p className="code-indent code-green">
-                    "Turning ideas into reality."
-                  </p>
-
-                  <p>);</p>
-                </div>
-
-                <div className="code-footer">
-                  <span>
-                    <Sparkles size={14} /> Always learning
-                  </span>
-                  <span>JS</span>
-                </div>
+              <div className="hero-photo-frame">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/image.png`}
+                  alt="Kartik Arora"
+                  className="hero-profile-photo"
+                />
               </div>
 
-              {/* FLOATING TAGS */}
               <div className="floating-tag tag-one">
                 <Code2 size={17} /> Building Projects
               </div>
@@ -587,14 +545,14 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                     Project <ArrowUpRight size={18} />
+                    Project <ArrowUpRight size={18} />
                   </a>
 
                   <a
-                      href={`${import.meta.env.BASE_URL}customer-churn.html`}
+                    href={`${import.meta.env.BASE_URL}customer-churn.html`}
                     className="btn-secondary"
                     target="_blank"
-                    rel="noreferrer"View
+                    rel="noreferrer"
                   >
                     View Notebook <ArrowUpRight size={18} />
                   </a>
