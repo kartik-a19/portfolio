@@ -9,6 +9,35 @@ import {
   X,
   Sparkles,
 } from "lucide-react";
+function GithubIcon({ size = 20 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.59 1.21 3.22.93.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.27-2.6 5.21-5.08 5.49.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+    </svg>
+  );
+}
+
+function LinkedinIcon({ size = 20 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.53v16.94c0 .85.69 1.53 1.55 1.53h16.9c.86 0 1.55-.68 1.55-1.53V3.53c0-.85-.69-1.53-1.55-1.53ZM7.93 18.74H4.97V9.2h2.96v9.54ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.84h-2.95V14.1c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.72H9.55V9.2h2.83v1.3h.04c.39-.75 1.36-1.53 2.8-1.53 2.99 0 3.54 1.97 3.54 4.53v5.24Z" />
+    </svg>
+  );
+}
 import "./App.css";
 
 const roles = [
@@ -78,7 +107,6 @@ function App() {
         {/* HERO SECTION */}
         <section className="hero" id="home">
           <div className="hero-grid container">
-            {/* LEFT CONTENT */}
             <motion.div
               className="hero-content"
               initial={{ opacity: 0, y: 30 }}
@@ -131,8 +159,9 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
+                  title="GitHub"
                 >
-                  <Code2 />
+                  <GithubIcon size={20} />
                 </a>
 
                 <a
@@ -140,29 +169,19 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
+                  title="LinkedIn"
                 >
-                  <Code2 />
+                  <LinkedinIcon size={20} />
                 </a>
 
                 <a
                   href="mailto:arorakartik913@gmail.com"
                   aria-label="Email"
+                  title="Email"
                 >
-                  <Mail />
+                  <Mail size={20} />
                 </a>
               </div>
-            </motion.div>
-
-            {/* RIGHT VISUAL */}
-            <motion.div
-              className="hero-visual"
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              <div className="visual-glow"></div>
-              <div className="orbit orbit-one"></div>
-              <div className="orbit orbit-two"></div>
 
               {/* CODE CARD */}
               <div className="visual-card">
@@ -582,322 +601,338 @@ function App() {
                 </div>
               </div>
 
-              
-{/* PROJECT IMAGE GALLERY */}
-<div className="project-gallery">
-  <div className="project-gallery-item">
-    <p className="gallery-label">PROJECT POSTER</p>
+              {/* PROJECT IMAGE GALLERY */}
+              <div className="project-gallery">
+                <div className="project-gallery-item">
+                  <p className="gallery-label">PROJECT POSTER</p>
 
-    <a
-      href={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
-      target="_blank"
-      rel="noreferrer"
-      className="gallery-image-link"
-    >
-      <img
-        src={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
-        alt="Customer Churn Prediction project poster"
-      />
+                  <a
+                    href={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="gallery-image-link"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
+                      alt="Customer Churn Prediction project poster"
+                    />
 
-      <span className="gallery-view-button">
-        View Full Poster <ArrowUpRight size={16} />
-      </span>
-    </a>
-  </div>
+                    <span className="gallery-view-button">
+                      View Full Poster <ArrowUpRight size={16} />
+                    </span>
+                  </a>
+                </div>
 
-  <div className="project-gallery-item">
-    <p className="gallery-label">HYPERPARAMETER TUNING</p>
+                <div className="project-gallery-item">
+                  <p className="gallery-label">HYPERPARAMETER TUNING</p>
 
-    <a
-      href={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
-      target="_blank"
-      rel="noreferrer"
-      className="gallery-image-link"
-    >
-      <img
-        src={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
-        alt="Customer Churn hyperparameter tuning results"
-      />
+                  <a
+                    href={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="gallery-image-link"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
+                      alt="Customer Churn hyperparameter tuning results"
+                    />
 
-      <span className="gallery-view-button">
-        View Full Results <ArrowUpRight size={16} />
-      </span>
-    </a>
-  </div>
-</div>
-
+                    <span className="gallery-view-button">
+                      View Full Results <ArrowUpRight size={16} />
+                    </span>
+                  </a>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
 
-{/* ACHIEVEMENTS SECTION */}
-<section id="achievements" className="achievements-section section">
-  <div className="container">
-    <motion.div
-      className="achievements-heading"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-    >
-      <p className="section-label">04 — MILESTONES</p>
+        {/* ACHIEVEMENTS SECTION */}
+        <section id="achievements" className="achievements-section section">
+          <div className="container">
+            <motion.div
+              className="achievements-heading"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <p className="section-label">04 — MILESTONES</p>
 
-      <h2 className="section-title">
-        Learning, growing & <span className="accent-text">achieving.</span>
-      </h2>
+              <h2 className="section-title">
+                Learning, growing & <span className="accent-text">achieving.</span>
+              </h2>
 
-      <p className="section-description">
-        A few milestones and learning experiences that reflect my
-        academic journey and continuous effort to improve.
-      </p>
-    </motion.div>
+              <p className="section-description">
+                A few milestones and learning experiences that reflect my
+                academic journey and continuous effort to improve.
+              </p>
+            </motion.div>
 
-    <div className="achievements-grid">
-      <motion.div
-        className="achievement-card"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <span className="achievement-icon">🏆</span>
-        <span className="achievement-type">ACADEMIC RECOGNITION</span>
-        <h3>Dean's List</h3>
-        <p>
-          Recognised on the Dean's List for academic performance,
-          achieving this distinction in two consecutive recognitions.
-        </p>
-      </motion.div>
+            <div className="achievements-grid">
+              <motion.div
+                className="achievement-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="achievement-icon">🏆</span>
+                <span className="achievement-type">ACADEMIC RECOGNITION</span>
+                <h3>Dean's List</h3>
+                <p>
+                  Recognised on the Dean's List for academic performance,
+                  achieving this distinction in two consecutive recognitions.
+                </p>
+              </motion.div>
 
-      <motion.div
-        className="achievement-card"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.12 }}
-      >
-        <span className="achievement-icon">📘</span>
-        <span className="achievement-type">CERTIFICATION</span>
-        <h3>Infosys Springboard</h3>
-        <p>
-          Completed Computer Fundamentals and Python Fundamentals
-          courses to strengthen core technical knowledge.
-        </p>
-      </motion.div>
+              <motion.div
+                className="achievement-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.12 }}
+              >
+                <span className="achievement-icon">📘</span>
+                <span className="achievement-type">CERTIFICATION</span>
+                <h3>Infosys Springboard</h3>
+                <p>
+                  Completed Computer Fundamentals and Python Fundamentals
+                  courses to strengthen core technical knowledge.
+                </p>
+              </motion.div>
 
-      <motion.div
-        className="achievement-card"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.24 }}
-      >
-        <span className="achievement-icon">💡</span>
-        <span className="achievement-type">CONTINUOUS LEARNING</span>
-        <h3>Machine Learning Courses</h3>
-        <p>
-          Explored Decision Trees, Ensemble Learning, AI Foundations,
-          Value Estimation and Feature Engineering through LinkedIn Learning.
-        </p>
-      </motion.div>
-    </div>
-  </div>
-</section>
+              <motion.div
+                className="achievement-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.24 }}
+              >
+                <span className="achievement-icon">💡</span>
+                <span className="achievement-type">CONTINUOUS LEARNING</span>
+                <h3>Machine Learning Courses</h3>
+                <p>
+                  Explored Decision Trees, Ensemble Learning, AI Foundations,
+                  Value Estimation and Feature Engineering through LinkedIn Learning.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-{/* CONTACT SECTION */}
-<section id="contact" className="contact-section section">
-  <div className="container">
-    <motion.div
-      className="contact-heading"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-    >
-      <p className="section-label">05 — GET IN TOUCH</p>
+        {/* CONTACT SECTION */}
+        <section id="contact" className="contact-section section">
+          <div className="container">
+            <motion.div
+              className="contact-heading"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <p className="section-label">05 — GET IN TOUCH</p>
 
-      <h2 className="section-title">
-        Let's build something <span className="accent-text">together.</span>
-      </h2>
+              <h2 className="section-title">
+                Let's build something <span className="accent-text">together.</span>
+              </h2>
 
-      <p className="section-description">
-        Have an idea, an opportunity, or just want to connect?
-        I'd be happy to hear from you.
-      </p>
-    </motion.div>
+              <p className="section-description">
+                Have an idea, an opportunity, or just want to connect?
+                I'd be happy to hear from you.
+              </p>
+            </motion.div>
 
-    <div className="contact-grid">
-      <motion.div
-        className="contact-info"
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-      >
-        <h3>Let's start a conversation.</h3>
+            <div className="contact-grid">
+              <motion.div
+                className="contact-info"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <h3>Let's start a conversation.</h3>
 
-        <p>
-          I'm always interested in learning, collaborating on projects
-          and connecting with people who share an interest in technology.
-        </p>
+                <p>
+                  I'm always interested in learning, collaborating on projects
+                  and connecting with people who share an interest in technology.
+                </p>
 
-        <a
-          href="mailto:arorakartik913@gmail.com"
-          className="contact-detail"
-        >
-          <span className="contact-detail-icon">
-            <Mail size={20} />
-          </span>
-          <span>
-            <small>EMAIL ME</small>
-            <strong>arorakartik913@gmail.com</strong>
-          </span>
-          <ArrowUpRight size={18} />
-        </a>
+                {/* EMAIL */}
+                <a
+                  href="mailto:arorakartik913@gmail.com"
+                  className="contact-detail"
+                >
+                  <span className="contact-detail-icon">
+                    <Mail size={20} />
+                  </span>
+                  <span>
+                    <small>EMAIL ME</small>
+                    <strong>arorakartik913@gmail.com</strong>
+                  </span>
+                  <ArrowUpRight size={18} />
+                </a>
 
-        <a
-          href="https://github.com/kartik-a19"
-          target="_blank"
-          rel="noreferrer"
-          className="contact-detail"
-        >
-          <span className="contact-detail-icon">
-            <Code2 size={20} />
-          </span>
-          <span>
-            <small>GITHUB</small>
-            <strong>kartik-a19</strong>
-          </span>
-          <ArrowUpRight size={18} />
-        </a>
+                {/* GITHUB */}
+                <a
+                  href="https://github.com/kartik-a19"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-detail"
+                >
+                  <span className="contact-detail-icon">
+                    <GithubIcon size={20} />
+                  </span>
+                  <span>
+                    <small>GITHUB</small>
+                    <strong>kartik-a19</strong>
+                  </span>
+                  <ArrowUpRight size={18} />
+                </a>
 
-        <a
-          href="https://www.linkedin.com/in/kartik-arora-683952375/"
-          target="_blank"
-          rel="noreferrer"
-          className="contact-detail"
-        >
-          <span className="contact-detail-icon">
-            <Code2 size={20} />
-          </span>
-          <span>
-            <small>LINKEDIN</small>
-            <strong>Connect with me</strong>
-          </span>
-          <ArrowUpRight size={18} />
-        </a>
-      </motion.div>
+                {/* LINKEDIN */}
+                <a
+                  href="https://www.linkedin.com/in/kartik-arora-683952375/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-detail"
+                >
+                  <span className="contact-detail-icon">
+                    <LinkedinIcon size={20} />
+                  </span>
+                  <span>
+                    <small>LINKEDIN</small>
+                    <strong>Connect with me</strong>
+                  </span>
+                  <ArrowUpRight size={18} />
+                </a>
+              </motion.div>
 
-      <motion.div
-        className="contact-form-card"
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-      >
-        <h3>Send me a message</h3>
-        <p>Fill in the details and your email app will open with the message.</p>
+              {/* CONTACT FORM */}
+              <motion.div
+                className="contact-form-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <h3>Send me a message</h3>
+                <p>
+                  Fill in the details and your email app will open with the message.
+                </p>
 
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
 
-            const formData = new FormData(event.currentTarget);
-            const name = formData.get("name");
-            const email = formData.get("email");
-            const subject = formData.get("subject");
-            const message = formData.get("message");
+                    const formData = new FormData(event.currentTarget);
+                    const name = formData.get("name");
+                    const email = formData.get("email");
+                    const subject = formData.get("subject");
+                    const message = formData.get("message");
 
-            const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+                    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
 
-            const mailto = `mailto:arorakartik913@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    const mailto = `mailto:arorakartik913@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            window.location.href = mailto;
-          }}
-        >
-          <label htmlFor="contact-name">Your Name</label>
-          <input
-            id="contact-name"
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
+                    window.location.href = mailto;
+                  }}
+                >
+                  <label htmlFor="contact-name">Your Name</label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
 
-          <label htmlFor="contact-email">Your Email</label>
-          <input
-            id="contact-email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
+                  <label htmlFor="contact-email">Your Email</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
 
-          <label htmlFor="contact-subject">Subject</label>
-          <input
-            id="contact-subject"
-            type="text"
-            name="subject"
-            placeholder="What is this about?"
-            required
-          />
+                  <label htmlFor="contact-subject">Subject</label>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    name="subject"
+                    placeholder="What is this about?"
+                    required
+                  />
 
-          <label htmlFor="contact-message">Your Message</label>
-          <textarea
-            id="contact-message"
-            name="message"
-            rows="5"
-            placeholder="Write your message here..."
-            required
-          ></textarea>
+                  <label htmlFor="contact-message">Your Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
 
-          <button type="submit" className="btn-primary contact-submit">
-            Send Message <ArrowUpRight size={18} />
-          </button>
-        </form>
-      </motion.div>
-    </div>
-  </div>
-</section>
-
-
+                  <button type="submit" className="btn-primary contact-submit">
+                    Send Message <ArrowUpRight size={18} />
+                  </button>
+                </form>
+              </motion.div>
+            </div>
+          </div>
+        </section>
       </main>
 
-{/* FOOTER */}
-<footer className="footer">
-  <div className="container footer-content">
-    <a href="#home" className="footer-logo">
-      KA<span>.</span>
-    </a>
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="container footer-content">
+          <a href="#home" className="footer-logo">
+            KA<span>.</span>
+          </a>
 
-    <p>
-      Designed & built with curiosity by <strong>Kartik Arora</strong>.
-    </p>
+          <p>
+            Designed & built with curiosity by <strong>Kartik Arora</strong>.
+          </p>
 
-    <div className="footer-links">
-      <a href="https://github.com/kartik-a19" target="_blank" rel="noreferrer">
-        GitHub
-      </a>
-      <a
-        href="https://www.linkedin.com/in/kartik-arora-683952375/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn
-      </a>
-      <a href="mailto:arorakartik913@gmail.com">Email</a>
-    </div>
+          {/* FOOTER SOCIAL ICONS */}
+          <div className="footer-links">
+            <a
+              href="https://github.com/kartik-a19"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <Github size={22} />
+            </a>
 
-    <span className="footer-copyright">
-      © {new Date().getFullYear()} Kartik Arora. All rights reserved.
-    </span>
-  </div>
-</footer>
-</>
-);
+            <a
+              href="https://www.linkedin.com/in/kartik-arora-683952375/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <Linkedin size={22} />
+            </a>
+
+            <a
+              href="mailto:arorakartik913@gmail.com"
+              aria-label="Email"
+              title="Email"
+            >
+              <Mail size={22} />
+            </a>
+          </div>
+
+          <span className="footer-copyright">
+            © {new Date().getFullYear()} Kartik Arora. All rights reserved.
+          </span>
+        </div>
+      </footer>
+    </>
+  );
 }
-
-    
-
 
 export default App;
