@@ -904,7 +904,7 @@ function App() {
               aria-label="GitHub"
               title="GitHub"
             >
-              <Github size={22} />
+              <GithubIcon size={22} />
             </a>
 
             <a
@@ -914,7 +914,7 @@ function App() {
               aria-label="LinkedIn"
               title="LinkedIn"
             >
-              <Linkedin size={22} />
+              <LinkedinIcon size={22} />
             </a>
 
             <a
