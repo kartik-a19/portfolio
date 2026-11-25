@@ -19,13 +19,13 @@
             Kartik<span>.</span>
         </a>
 
-        <div class="churn-nav-links">
-            <a href="index.html">← Back to Portfolio</a>
-            <a href="#overview">Overview</a>
-            <a href="#dataset">Dataset</a>
-            <a href="#project-workflow">Project Workflow</a>
-            <a href="#results">Results</a>
-        </div>
+        <a href="index.html">← Back to Portfolio</a>
+<a href="#overview">Overview</a>
+<a href="#dataset">Dataset</a>
+<a href="#project-workflow">Workflow</a>
+<a href="#hyperparameter-tuning">Tuning</a>
+<a href="#poster">Poster</a>
+<a href="#results">Results</a>
     </nav>
 
 
@@ -386,6 +386,24 @@
                 containing customer details, subscribed services,
                 account information and churn status.
             </p>
+            <div class="churn-resource-card">
+    <div>
+        <h3>Dataset Source</h3>
+        <p>
+            The dataset was obtained from Kaggle's
+            Telco Customer Churn collection.
+        </p>
+    </div>
+
+    <a
+        href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="churn-primary-btn"
+    >
+        View Kaggle Dataset ↗
+    </a>
+</div>
 
             <div class="churn-info-grid">
 
@@ -1313,6 +1331,112 @@
             </div>
 
         </section>
+        <!-- HYPERPARAMETER TUNING -->
+<section class="churn-section" id="hyperparameter-tuning">
+
+    <p class="churn-section-label">MODEL OPTIMIZATION</p>
+
+    <h2>Hyperparameter Tuning</h2>
+
+    <p class="churn-intro">
+        Hyperparameter tuning was performed using GridSearchCV
+        with 5-fold cross-validation to identify suitable
+        configurations for the classification models.
+    </p>
+
+    <div class="churn-content-card">
+        <h3>What is GridSearchCV?</h3>
+
+        <p>
+            GridSearchCV systematically tests different
+            combinations of hyperparameter values and
+            evaluates them using cross-validation.
+        </p>
+
+        <p>
+            In this project, F1-score was used as the
+            scoring metric to balance precision and recall.
+        </p>
+    </div>
+
+    <div class="tuning-image-card">
+        <img
+            src="images/Churn_GridSearch_Simulator.jpg"
+            alt="Customer Churn GridSearch hyperparameter tuning visualization"
+            loading="lazy"
+        >
+
+        <p>
+            Hyperparameter tuning visualization showing
+            the model optimization process.
+        </p>
+    </div>
+
+    <h3>Selected Hyperparameters</h3>
+
+    <div class="table-wrapper">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Selected Parameters</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Logistic Regression</td>
+                    <td>C = 0.1, Solver = liblinear</td>
+                </tr>
+
+                <tr>
+                    <td>Decision Tree</td>
+                    <td>Criterion = entropy, Max Depth = 5, Min Samples Split = 2</td>
+                </tr>
+
+                <tr>
+                    <td>Random Forest</td>
+                    <td>Max Depth = 5, Max Features = sqrt, Min Samples Split = 5, Estimators = 100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="churn-highlight">
+        <h3>Why F1-score?</h3>
+        <p>
+            Since the dataset contains more non-churn customers
+            than churn customers, accuracy alone may not provide
+            a complete picture. F1-score helps evaluate the
+            balance between precision and recall.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- PROJECT POSTER -->
+<section class="churn-section" id="poster">
+
+    <p class="churn-section-label">PROJECT PRESENTATION</p>
+
+    <h2>Project Poster</h2>
+
+    <p class="churn-intro">
+        A visual summary of the Customer Churn Prediction
+        project, covering its problem statement, methodology,
+        machine learning approach and findings.
+    </p>
+
+    <div class="tuning-image-card poster-image-card">
+        <img
+            src="images/customer-churn-poster.png"
+            alt="Customer Churn Prediction project poster"
+            loading="lazy"
+        >
+    </div>
+
+</section>
 
 
         <!-- NOTEBOOK LINK -->

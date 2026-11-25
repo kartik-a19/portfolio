@@ -854,3 +854,66 @@ html {
         gap: 5px;
     }
 }
+/* PROJECT RESOURCE CARD */
+
+.churn-resource-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 16px;
+}
+
+.churn-resource-card h3 {
+    margin-bottom: 8px;
+}
+
+.churn-resource-card p {
+    margin: 0;
+    color: #aab6c8;
+}
+
+/* TUNING AND POSTER IMAGES */
+
+.tuning-image-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.tuning-image-card img {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.tuning-image-card p {
+    margin-top: 15px;
+    color: #aab6c8;
+}
+
+.poster-image-card img {
+    max-height: none;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+    .churn-resource-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .churn-nav-links {
+        flex-wrap: wrap;
+    }
+}

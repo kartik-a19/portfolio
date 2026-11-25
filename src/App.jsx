@@ -13,14 +13,7 @@ import "./App.css";
 
 function GithubIcon({ size = 20 }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.59 1.21 3.22.93.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.27-2.6 5.21-5.08 5.49.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
     </svg>
   );
@@ -28,14 +21,7 @@ function GithubIcon({ size = 20 }) {
 
 function LinkedinIcon({ size = 20 }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.53v16.94c0 .85.69 1.53 1.55 1.53h16.9c.86 0 1.55-.68 1.55-1.53V3.53c0-.85-.69-1.53-1.55-1.53ZM7.93 18.74H4.97V9.2h2.96v9.54ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.84h-2.95V14.1c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.72H9.55V9.2h2.83v1.3h.04c.39-.75 1.36-1.53 2.8-1.53 2.99 0 3.54 1.97 3.54 4.53v5.24Z" />
     </svg>
   );
@@ -80,14 +66,7 @@ function App() {
           </button>
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            {[
-              "Home",
-              "About",
-              "Skills",
-              "Projects",
-              "Achievements",
-              "Contact",
-            ].map((item) => (
+            {["Home", "About", "Skills", "Projects", "Achievements", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -108,8 +87,6 @@ function App() {
         {/* HERO SECTION */}
         <section className="hero" id="home">
           <div className="hero-grid container">
-
-            {/* LEFT SIDE: INTRODUCTION */}
             <motion.div
               className="hero-content"
               initial={{ opacity: 0, y: 30 }}
@@ -147,47 +124,29 @@ function App() {
                 <a href="#projects" className="btn-primary">
                   Explore My Work <ArrowUpRight size={18} />
                 </a>
-
                 <a href="#contact" className="btn-secondary">
                   Get In Touch <Mail size={17} />
                 </a>
               </div>
 
-              {/* SOCIAL LINKS */}
               <div className="social-links">
                 <span>FIND ME ON</span>
 
-                <a
-                  href="https://github.com/kartik-a19"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub"
-                  title="GitHub"
-                >
+                <a href="https://github.com/kartik-a19" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
                   <GithubIcon size={20} />
                 </a>
 
-                <a
-                  href="https://www.linkedin.com/in/kartik-arora-683952375/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                  title="LinkedIn"
-                >
+                <a href="https://www.linkedin.com/in/kartik-arora-683952375/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
                   <LinkedinIcon size={20} />
                 </a>
 
-                <a
-                  href="mailto:arorakartik913@gmail.com"
-                  aria-label="Email"
-                  title="Email"
-                >
+                <a href="mailto:arorakartik913@gmail.com" aria-label="Email" title="Email">
                   <Mail size={20} />
                 </a>
               </div>
             </motion.div>
 
-            {/* RIGHT SIDE: PROFILE PHOTO */}
+            {/* PROFILE PHOTO */}
             <motion.div
               className="hero-visual"
               initial={{ opacity: 0, scale: 0.92, x: 25 }}
@@ -219,7 +178,6 @@ function App() {
             </motion.div>
           </div>
 
-          {/* BOTTOM SCROLL INDICATOR */}
           <div className="hero-bottom container">
             <span>SCROLL TO EXPLORE</span>
             <div className="scroll-line"></div>
@@ -258,7 +216,6 @@ function App() {
                 transition={{ duration: 0.7 }}
               >
                 <span className="about-card-number">01 / MY STORY</span>
-
                 <h3>Hey, I'm Kartik!</h3>
 
                 <p>
@@ -291,41 +248,29 @@ function App() {
                 transition={{ duration: 0.7, delay: 0.15 }}
               >
                 <div className="about-info-card">
-                  <div className="about-icon">
-                    <Code2 size={22} />
-                  </div>
+                  <div className="about-icon"><Code2 size={22} /></div>
                   <div>
                     <span>WHAT I EXPLORE</span>
                     <h3>Technology & Development</h3>
-                    <p>
-                      Programming, frontend development and machine learning.
-                    </p>
+                    <p>Programming, frontend development and machine learning.</p>
                   </div>
                 </div>
 
                 <div className="about-info-card">
-                  <div className="about-icon">
-                    <Sparkles size={22} />
-                  </div>
+                  <div className="about-icon"><Sparkles size={22} /></div>
                   <div>
                     <span>WHAT DRIVES ME</span>
                     <h3>Learning by Building</h3>
-                    <p>
-                      Turning theoretical knowledge into practical projects.
-                    </p>
+                    <p>Turning theoretical knowledge into practical projects.</p>
                   </div>
                 </div>
 
                 <div className="about-info-card">
-                  <div className="about-icon">
-                    <Mail size={22} />
-                  </div>
+                  <div className="about-icon"><Mail size={22} /></div>
                   <div>
                     <span>MY APPROACH</span>
                     <h3>Curiosity & Consistency</h3>
-                    <p>
-                      Exploring new ideas and improving one step at a time.
-                    </p>
+                    <p>Exploring new ideas and improving one step at a time.</p>
                   </div>
                 </div>
               </motion.div>
@@ -362,32 +307,28 @@ function App() {
                   title: "Programming Languages",
                   icon: "⌨",
                   skills: ["C", "Python", "JavaScript"],
-                  description:
-                    "Building programming fundamentals and logical thinking.",
+                  description: "Building programming fundamentals and logical thinking.",
                 },
                 {
                   number: "02",
                   title: "Frontend Development",
                   icon: "✦",
                   skills: ["HTML", "CSS", "JavaScript", "React"],
-                  description:
-                    "Creating responsive and interactive web experiences.",
+                  description: "Creating responsive and interactive web experiences.",
                 },
                 {
                   number: "03",
                   title: "Machine Learning",
                   icon: "◈",
                   skills: ["Python", "NumPy", "Pandas", "Scikit-learn"],
-                  description:
-                    "Exploring data analysis and machine learning concepts.",
+                  description: "Exploring data analysis and machine learning concepts.",
                 },
                 {
                   number: "04",
                   title: "Tools & Platforms",
                   icon: "⚙",
                   skills: ["VS Code", "Git", "GitHub", "Google Colab"],
-                  description:
-                    "Using development tools to build and manage projects.",
+                  description: "Using development tools to build and manage projects.",
                 },
               ].map((category, index) => (
                 <motion.div
@@ -404,10 +345,7 @@ function App() {
                   </div>
 
                   <h3>{category.title}</h3>
-
-                  <p className="skill-description">
-                    {category.description}
-                  </p>
+                  <p className="skill-description">{category.description}</p>
 
                   <div className="skill-tags">
                     {category.skills.map((skill) => (
@@ -527,77 +465,18 @@ function App() {
                 </div>
 
                 <div className="project-tech">
-                  {[
-                    "Python",
-                    "Pandas",
-                    "NumPy",
-                    "Scikit-learn",
-                    "Matplotlib",
-                  ].map((tech) => (
+                  {["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"].map((tech) => (
                     <span key={tech}>{tech}</span>
                   ))}
                 </div>
 
+                {/* ONLY ONE PROJECT BUTTON ON HOMEPAGE */}
                 <div className="project-actions">
                   <a
                     href={`${import.meta.env.BASE_URL}customer-churn.html`}
                     className="btn-primary"
-                    target="_blank"
-                    rel="noreferrer"
                   >
-                    Project <ArrowUpRight size={18} />
-                  </a>
-
-                  <a
-                    href={`${import.meta.env.BASE_URL}customer-churn.html`}
-                    className="btn-secondary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Notebook <ArrowUpRight size={18} />
-                  </a>
-                </div>
-              </div>
-
-              {/* PROJECT IMAGE GALLERY */}
-              <div className="project-gallery">
-                <div className="project-gallery-item">
-                  <p className="gallery-label">PROJECT POSTER</p>
-
-                  <a
-                    href={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="gallery-image-link"
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/customer-churn-poster.png`}
-                      alt="Customer Churn Prediction project poster"
-                    />
-
-                    <span className="gallery-view-button">
-                      View Full Poster <ArrowUpRight size={16} />
-                    </span>
-                  </a>
-                </div>
-
-                <div className="project-gallery-item">
-                  <p className="gallery-label">HYPERPARAMETER TUNING</p>
-
-                  <a
-                    href={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="gallery-image-link"
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/Churn_GridSearch_Simulator.jpg`}
-                      alt="Customer Churn hyperparameter tuning results"
-                    />
-
-                    <span className="gallery-view-button">
-                      View Full Results <ArrowUpRight size={16} />
-                    </span>
+                    View Full Project <ArrowUpRight size={18} />
                   </a>
                 </div>
               </div>
@@ -716,14 +595,8 @@ function App() {
                   and connecting with people who share an interest in technology.
                 </p>
 
-                {/* EMAIL */}
-                <a
-                  href="mailto:arorakartik913@gmail.com"
-                  className="contact-detail"
-                >
-                  <span className="contact-detail-icon">
-                    <Mail size={20} />
-                  </span>
+                <a href="mailto:arorakartik913@gmail.com" className="contact-detail">
+                  <span className="contact-detail-icon"><Mail size={20} /></span>
                   <span>
                     <small>EMAIL ME</small>
                     <strong>arorakartik913@gmail.com</strong>
@@ -731,16 +604,8 @@ function App() {
                   <ArrowUpRight size={18} />
                 </a>
 
-                {/* GITHUB */}
-                <a
-                  href="https://github.com/kartik-a19"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="contact-detail"
-                >
-                  <span className="contact-detail-icon">
-                    <GithubIcon size={20} />
-                  </span>
+                <a href="https://github.com/kartik-a19" target="_blank" rel="noreferrer" className="contact-detail">
+                  <span className="contact-detail-icon"><GithubIcon size={20} /></span>
                   <span>
                     <small>GITHUB</small>
                     <strong>kartik-a19</strong>
@@ -748,16 +613,8 @@ function App() {
                   <ArrowUpRight size={18} />
                 </a>
 
-                {/* LINKEDIN */}
-                <a
-                  href="https://www.linkedin.com/in/kartik-arora-683952375/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="contact-detail"
-                >
-                  <span className="contact-detail-icon">
-                    <LinkedinIcon size={20} />
-                  </span>
+                <a href="https://www.linkedin.com/in/kartik-arora-683952375/" target="_blank" rel="noreferrer" className="contact-detail">
+                  <span className="contact-detail-icon"><LinkedinIcon size={20} /></span>
                   <span>
                     <small>LINKEDIN</small>
                     <strong>Connect with me</strong>
@@ -853,33 +710,16 @@ function App() {
             Designed & built with curiosity by <strong>Kartik Arora</strong>.
           </p>
 
-          {/* FOOTER SOCIAL ICONS */}
           <div className="footer-links">
-            <a
-              href="https://github.com/kartik-a19"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              title="GitHub"
-            >
+            <a href="https://github.com/kartik-a19" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
               <GithubIcon size={22} />
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/kartik-arora-683952375/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
+            <a href="https://www.linkedin.com/in/kartik-arora-683952375/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <LinkedinIcon size={22} />
             </a>
 
-            <a
-              href="mailto:arorakartik913@gmail.com"
-              aria-label="Email"
-              title="Email"
-            >
+            <a href="mailto:arorakartik913@gmail.com" aria-label="Email" title="Email">
               <Mail size={22} />
             </a>
           </div>
