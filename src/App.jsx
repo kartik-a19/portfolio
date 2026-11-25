@@ -582,7 +582,7 @@ function App() {
 
                 <div className="project-actions">
                   <a
-                    href="./customer-churn.html"
+                    href={`${import.meta.env.BASE_URL}customer-churn.html`}
                     className="btn-primary"
                     target="_blank"
                     rel="noreferrer"
