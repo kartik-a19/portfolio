@@ -587,14 +587,14 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    View Project <ArrowUpRight size={18} />
+                     Project <ArrowUpRight size={18} />
                   </a>
 
                   <a
-                    href="https://colab.research.google.com/drive/1kstNuHZXFUsjrSEr729gnlzuDcRMRlH7?usp=sharing"
+                      href={`${import.meta.env.BASE_URL}customer-churn.html`}
                     className="btn-secondary"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer"View
                   >
                     View Notebook <ArrowUpRight size={18} />
                   </a>
